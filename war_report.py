@@ -135,12 +135,9 @@ def sentmail():
     + "<br>王燕尚未处理的任务: " + str(WY)
 
     #发信邮箱 
-    mail_from="zhangjingfeng@playcrab.com"
+    mail_from=""
     #收信邮箱
-    #mail_to=["zhangjingfeng@playcrab.com","xuezhisheng@playcrab.com","yangming@playcrab.com","huachangmiao@playcrab.com",\
-           #"yuantianshi@playcrab.com","liuxuefeng@playcrab.com","songliyuan@playcrab.com","wangyang@playcrab.com",\
-            #"wangyanrong@playcrab.com","srgzyq@playcrab.com"]
-    mail_to=["zhangjingfeng@playcrab.com"]
+    mail_to=[""]
     
     
     subject = '图片html发送邮件测试' 
@@ -189,7 +186,7 @@ def sentmail():
     smtp.ehlo()
     smtp.starttls()
     #用户名密码
-    smtp.login("zhangjingfeng@playcrab.com","billingZJF951413!!")
+    smtp.login("mail address","mail pass")
     smtp.sendmail(mail_from,mail_to,msg.as_string())
     smtp.quit()
 
